@@ -303,15 +303,6 @@
 
 				<section>
 					<h2>Finding the Right Playstyle</h2>
-					<p class="fragment" data-fragment-index="1">We propose a search method to find playstyles (policies) for Super Mario Bros. in real-time.</p>
-
-					<img class="fragment" data-fragment-index="2" style="width:40%" src="./images/marioMix_1.png" style="border-radius: 10px">
-
-					<small class="fragment" data-fragment-index="2" style="text-align: left; font-size: 18px">Christian Arzate Cruz, and Takeo Igarashi. "MarioMix: Creating Aligned Playstyles for Bots with Interactive Reinforcement Learning" In Extended Abstracts of the Annual Symposium on Computer-Human Interaction in Play (CHI Play), 2020.</small>
-				</section>
-
-				<section>
-					<h2>Finding the Right Playstyle</h2>
 					<p class="fragment" data-fragment-index="1">We search for playstyles using gameplay traces by the users.</p>
 					<br>
 					<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/marioMix_2.png" style="border-radius: 10px">
@@ -320,55 +311,32 @@
 					<small class="fragment" data-fragment-index="2" style="text-align: left; font-size: 18px">Christian Arzate Cruz, and Takeo Igarashi. "MarioMix: Creating Aligned Playstyles for Bots with Interactive Reinforcement Learning" In Extended Abstracts of the Annual Symposium on Computer-Human Interaction in Play (CHI Play), 2020.</small>
 				</section>
 
-
-
-				<!-------------------------- S1_P3 -------------------------->
-				<section data-background-gradient="radial-gradient(#c1c0bd, #f7f6f5)">
-					<br>
-					<h1 style="color:#5e5c64">Large Language Models as Input</h1>
+				<section>
+					<h2>Demo</h2>
+					<video class="fragment" data-fragment-index="2"  controls style="width:75%" data-autoplay src="./demos/demo_mariomix.mp4"></video>
 				</section>
 
 				<section>
-					<h2>Procedutal Content Generation</h2>
-					
-					<video controls style="width:75%" data-autoplay src="./demos/demo_felix_txt.mov"></video>
-					<br>
-					<small style="text-align: left;"><strong>Felix Eckert</strong></small>
-				</section>
+					<h2>Design</h2>
+					<ul>
+						<li><strong>High-level:</strong> Demonstrations</li>
+						<li><strong>Feedback:</strong> Action advice</li>
 
-				<section>
-					<h2>Agent Alignment</h2>
-					<video controls style="width:90%" data-autoplay src="./demos/demo_yosou.mp4"></video>
-					<small style="text-align: left;"><strong>Yosou Katsu</strong></small>
-				</section>
-
-				<section>
-					<h2>Search Game Events</h2>
-					<br>
-					<br>
-					<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/llm_game_events.png" style="border-radius: 10px">
-
-					<br>
-					<br>
-					<small class="fragment" data-fragment-index="2" style="text-align: left; font-size: 18px"><strong>Yosou Katsu</strong></small>
+					</ul>
 				</section>
 
 
 				<!-------------------------- S1 New Interaction Methods Summary -------------------------->
-				<!-------------------- interactive RL, MarioMix, LLM, Eyelid gestures -------------------->
+				<!-------------------- new interaction methods -------------------->
 				<section>
 					<h2 style="border-bottom: 0px solid #000; background:rgba(211, 36, 106, 0.589); color:#fff;">Summary</h2>
-					<ol>
-						<li class="fragment" data-fragment-index="1">We proposed a framework for HCI researchers to design <strong>new interaction methods</strong> and <strong>applications.</strong></li>
-						<li class="fragment" data-fragment-index="2">New ways to <strong>search</strong> and <strong>combine</strong> bot <strong>behaviors.</strong></li>
-						<li class="fragment" data-fragment-index="3">Using <strong>natural language</strong> as <strong>input</strong> method.</li>
-						<li class="fragment" data-fragment-index="4">Desing of <strong>natural gestures</strong> for <strong>UI.</strong></li>
-					</ol>
+					<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/interactive_rl_inter.png" style="border-radius: 10px" float="lef">
 				</section>
 				</section>
 
 
 				
+
 
 
 
@@ -383,40 +351,65 @@
 
 					<section>
 						<h2>Design Considerations</h2>
-						<p class="fragment" data-fragment-index="1">How to design new interaction methods?</p>
-					</section>
+						<p class="fragment" data-fragment-index="1">Selecting how to <strong>adapt</strong> the RL-based <strong>model</strong> according to the type of feedback.</p>
 
-
-					<!-------------------------- S2_P1 -------------------------->
-					<section data-background-gradient="radial-gradient(#c1c0bd, #f7f6f5)">
-						<br>
-						<h1 style="color:#5e5c64">Human-like Behaviors</h1>
+						<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/interactive_rl_perso.png" style="border-radius: 10px" float="lef">
 					</section>
 
 					<section>
-						<h2>Believable Characters</h2>
-						<p class="fragment" data-fragment-index="1">Creating bots that look like they’re being controlled by humans.</p>
+						<h2>Reward Shaping</h2>
+						<p class="fragment" data-fragment-index="1"><strong>Adapting</strong> the <strong>reward function</strong> by hand to fit the user's intentions.</p>
 						<br>
-						<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/turing_test.png" style="border-radius: 10px">
-	
-						<br>
-						<br>
-						<small class="fragment" data-fragment-index="2" style="text-align: left; font-size: 18px">Christian Arzate Cruz, and Jorge Adolfo Ramirez Uresti. "HRLB⌃2: A Reinforcement Learning Based Framework for Believable Bots" Applied Sciences, 2018.</small>
+
+						<div class="row">
+							<div class="column">
+								<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/lava_example.png" style="border-radius: 10px" float="lef">						
+							</div>
+						<div class="column fragment"  data-fragment-index="3">
+								<strong>Original RF</strong>
+								<br>
+								<ul>
+									<li><strong>Lava:</strong> -1</li>
+									<li><strong>Move:</strong> 0</li>
+									<li><strong>Goal:</strong> 1</li>
+								</ul>
+						</div>
+						<div class="column fragment"  data-fragment-index="4">
+								<strong>Adapted RF</strong>
+								<br>
+								<ul>
+									<li><strong>Lava:</strong> -0.5</li>
+									<li><strong>Move:</strong> 0.1</li>
+									<li><strong>Goal:</strong> 1</li>
+								</ul>
+						</div>
+						</div>
 					</section>
 
 					<section>
-						<h2>What makes AI appear human-like?</h2>
-						<p class="fragment" data-fragment-index="1">Learning human-like behaviors by observing how humans play it.</p>
-						
-						<img class="fragment" data-fragment-index="2" style="width:50%" src="./images/diego.png" style="border-radius: 10px">
-
+						<h2>Policy Shaping</h2>
+						<p class="fragment" data-fragment-index="1"><strong>Overriding</strong> the original <strong>policy</strong> of the agent.</p>
 						<br>
-						<small class="fragment" data-fragment-index="2" style="text-align: left; font-size: 18px">Christian Arzate Cruz, and Jorge Adolfo Ramirez Uresti. "HRLB⌃2: A Reinforcement Learning Based Framework for Believable Bots" Applied Sciences, 2018.</small>
-					</section>
 
-					<section>
-						<h2>Demo</h2>
-						<video controls style="width:100%" data-autoplay src="./demos/mark_bot.mp4"></video>
+						<div class="row">
+							<div class="column">
+								<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/lava_example.png" style="border-radius: 10px" float="lef">						
+							</div>
+						<div class="column fragment"  data-fragment-index="3">
+								<strong>Original Policy</strong>
+								<br>
+								<ul>
+									<li><strong>Action:</strong> Forward</li>
+								</ul>
+						</div>
+						<div class="column fragment"  data-fragment-index="4">
+								<strong>Adapted Policy</strong>
+								<br>
+								<ul>
+									<li><strong>Action:</strong> Right</li>
+								</ul>
+						</div>
+						</div>
 					</section>
 
 
@@ -442,15 +435,20 @@
 						</div>
 					</section>
 
+					<section>
+						<h2>References</h2>
+						<ol>
+							<li>Khalifa, Ahmed, et al. <strong>"Pcgrl: Procedural content generation via reinforcement learning."</strong> Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment. Vol. 16. No. 1. 2020.</li>
+							<li>Jiang, Zehua, et al. <strong>"Learning Controllable 3D Level Generators."</strong> Proceedings of the 17th International Conference on the Foundations of Digital Games. 2022.</li>
+
+						</ol>
+					</section>
+
 					<!-------------------------- S2 New Personalized Models Summary -------------------------->
-					<!-------------------- FLow, human-like, felix -------------------->
+					<!-------------------- personalized models -------------------->
 					<section>
 						<h2 style="border-bottom: 0px solid #000; background:rgba(211, 36, 106, 0.589); color:#fff;">Summary</h2>
-						<ol>
-							<li class="fragment" data-fragment-index="1">How to <strong>adapt</strong> games to <strong>maximize</strong> player’s <strong>enjoyment.</strong></li>
-							<li class="fragment" data-fragment-index="2">Creating <strong>human-like bots</strong> that <strong>adapt</strong> their <strong>playstyle.</strong></li>
-							<li class="fragment" data-fragment-index="3"><strong>Adapting</strong> AI <strong>suggestions</strong> to <strong>fit</strong> the <strong>users' intentions</strong>.</li>
-						</ol>
+						<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/interactive_rl_perso.png" style="border-radius: 10px" float="lef">
 					</section>
 				</section>
 
