@@ -62,26 +62,29 @@
 		<div class="reveal">
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section data-background-gradient="radial-gradient(#f76151, #fb8d8d)">
-					<br>
-						<img  src="./images/isid.png" alt="reveal.js logo" style="position: absolute; top:-30px; right:650px; height: 50px; background: transparent;">
-
-						<img  src="./images/ritsu_logo.png" alt="reveal.js logo" style="position: absolute; top:-30px; right:70px; height: 80px; background: transparent;">
-					</a>
-					<br>
-					<h3>Designing Interactive Reinforcement Learning Applications</h3>
-					<p>
-					
-					<br>
-					<medium>Christian Arzate Cruz</a></medium>
-					<br>
-					<br>
-					<img src="./images/yo.png" alt="reveal.js logo" style="height: 90px; margin: 0 auto 2rem auto; background: transparent;">
-					</p>
-				</section>
+				
 
 
 				<section>
+					<section data-background-gradient="radial-gradient(#f76151, #fb8d8d)">
+						<br>
+							<img  src="./images/isid.png" alt="reveal.js logo" style="position: absolute; top:-30px; right:650px; height: 50px; background: transparent;">
+	
+							<img  src="./images/ritsu_logo.png" alt="reveal.js logo" style="position: absolute; top:-30px; right:70px; height: 80px; background: transparent;">
+						</a>
+						<br>
+						<h3>Designing Interactive Reinforcement Learning Applications</h3>
+						<p>
+						
+						<br>
+						<medium>Christian Arzate Cruz</a></medium>
+						<br>
+						<br>
+						<img src="./images/qrcode_red.png" alt="reveal.js logo" style="height: 180px; margin: 0 auto 2rem auto; background: transparent;">
+						</p>
+					</section>
+
+
 					<section style="background-color:rgb(248, 128, 115);">
 						<div style="background-color:rgb(248, 128, 115); border-radius:20px; border-color:rgb(248, 128, 115); border-width: 10px; border-style: solid">
 							<br><h1 style="color:#ffffff">Interactive RL</h1><br>
@@ -436,11 +439,21 @@
 					</section>
 
 					<section>
+						<h2>Design</h2>
+						<ul>
+							<li><strong>High-level:</strong> Demonstrations</li>
+							<li><strong>Feedback:</strong> Action advice</li>
+							<li><strong>Knowledge integration:</strong> Reward shaping</li>
+
+
+						</ul>
+					</section>
+
+					<section>
 						<h2>References</h2>
 						<ol>
-							<li>Khalifa, Ahmed, et al. <strong>"Pcgrl: Procedural content generation via reinforcement learning."</strong> Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment. Vol. 16. No. 1. 2020.</li>
-							<li>Jiang, Zehua, et al. <strong>"Learning Controllable 3D Level Generators."</strong> Proceedings of the 17th International Conference on the Foundations of Digital Games. 2022.</li>
-
+							<li>Khalifa, Ahmed, et al. <strong>PCGRL: Procedural content generation via reinforcement learning.</strong> Proceedings of the AAAI Conference on Artificial Intelligence and Interactive Digital Entertainment. Vol. 16. No. 1. 2020.</li>
+							<li>Jiang, Zehua, et al. <strong>Learning Controllable 3D Level Generators.</strong> Proceedings of the 17th International Conference on the Foundations of Digital Games. 2022.</li>
 						</ol>
 					</section>
 
@@ -465,40 +478,69 @@
 
 					<section>
 						<h2>Design Considerations</h2>
-						<p class="fragment" data-fragment-index="1">How to design new interaction methods?</p>
+						<p class="fragment" data-fragment-index="1">Presenting the model in a useful and easy-to-understand manner.</p>
+
+						<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/interactive_rl_explain.png" style="border-radius: 10px" float="lef">
 					</section>
 
-					<!-------------------------- S3_P1 -------------------------->
-					<section data-background-gradient="radial-gradient(#c1c0bd, #f7f6f5)">
-						<br>
-						<h1 style="color:#5e5c64">Interactive Explanations</h1>
-					</section>
 
 					<section>
-						<h2>Interactive Explanations</h2>
-						<p class="fragment" data-fragment-index="1">Natural language templates for a two-way communication method.</p>
+						<h2>Explainable RL</h2>
+						<p class="fragment" data-fragment-index="1">Display the <strong>current policy</strong> and <strong>why</strong> the agent selected a given action.</p>
 						<br>
-						<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/interactive_explanations.png" style="border-radius: 10px">
-	
-						<br>
-						<br>
-						<small class="fragment" data-fragment-index="2" style="text-align: left; font-size: 18px">Christian Arzate Cruz, and Takeo Igarashi. "Interactive Explanations: Diagnosis and Repair of Reinforcement Learning Based Agent Behaviors" In IEEE Conference on Games (CoG), 2021.</small>
+						<p class="fragment" data-fragment-index="2"><strong>Why?</strong></p>
+						<ul class="fragment" data-fragment-index="3">
+							<li>Reward function</li>
+							<li>Value function</li>
+							<li>Policy</li>
+							<li>State</li>
+						</ul>
 					</section>
+					
+				<section>
+					<h2>Explainable RL</h2>
+					<p class="fragment" data-fragment-index="1">Explain the <strong>main elements</strong> that contribute to selecting an action at <strong>different time scales</strong>.</p>
+					<br>
+					<p class="fragment" data-fragment-index="2"><strong>Data and time</strong></p>
+					<ul class="fragment" data-fragment-index="3">
+						<li>Principal Component Analysis</li>
+						<li>Instant, mid-term, and long-term goals</li>
+					</ul>
+				</section>
 
-					<section>
-						<h2>Demo</h2>
-						<video controls style="width:100%" data-autoplay src="./demos/explanation_zoom.mov"></video>
-					</section>
+				<!-------------------------- S3_P1 -------------------------->
+				<section data-background-gradient="radial-gradient(#c1c0bd, #f7f6f5)">
+					<br>
+					<h1 style="color:#5e5c64">Interactive Explanations</h1>
+				</section>
+				<section>
+					<h2>Interactive Explanations</h2>
+					<p class="fragment" data-fragment-index="1">Natural language templates for a two-way communication method.</p>
+					<br>
+					<img class="fragment" data-fragment-index="2" style="width:90%" src="./images/interactive_explanations.png" style="border-radius: 10px">
 
+					<br>
+					<br>
+					<small class="fragment" data-fragment-index="2" style="text-align: left; font-size: 18px">Christian Arzate Cruz, and Takeo Igarashi. "Interactive Explanations: Diagnosis and Repair of Reinforcement Learning Based Agent Behaviors" In IEEE Conference on Games (CoG), 2021.</small>
+				</section>
+				<section>
+					<h2>Demo</h2>
+					<video controls style="width:100%" data-autoplay src="./demos/explanation_zoom.mov"></video>
+				</section>
 
 
 					<!-------------------------- S3 Explainable AI Summary -------------------------->
 					<!-------------------- editable explanations, explainable AI -------------------->
 					<section>
 						<h2 style="border-bottom: 0px solid #000; background:rgba(211, 36, 106, 0.589); color:#fff;">Summary</h2>
+						<img class="fragment" data-fragment-index="1" style="width:90%" src="./images/xmario_example.png" style="border-radius: 10px">
+
 						<ol>
-							<li class="fragment" data-fragment-index="1">Exposing the <strong>thinking procedure</strong> of a bot at <strong>different time-scales</strong>.</li>
-							<li class="fragment" data-fragment-index="2">Creating <strong>uncertainty-based explanations</strong> to present the current <strong>learning state</strong> of the model.</li>
+							<li class="fragment" data-fragment-index="2"><strong>[7, 8]</strong> Action</li>
+							<li class="fragment" data-fragment-index="3"><strong>[1-4]</strong> State</li>
+							<li class="fragment" data-fragment-index="4"><strong>[9]</strong> Short-term goal</li>
+							<li class="fragment" data-fragment-index="5"><strong>[Center Box]</strong> Contrast with another action</li>
+
 						</ol>
 					</section>
 				</section>
@@ -533,8 +575,8 @@
 							</div>
 						</div>
 						<br>
-						<p class="fragment">We made use of different <strong>high-level feedback</strong> and</p>
-						<p class="fragment"><strong>knowledge integration methods</strong> depending on the project.</p>
+						<p class="fragment">How to use of different <strong>high-level feedback</strong> and</p>
+						<p class="fragment"><strong>knowledge integration methods</strong> depending on the application.</p>
 						
 
 						<!----<ul class="fragment">
